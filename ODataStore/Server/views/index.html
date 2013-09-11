@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    {% for site in sites %}
+    <div>
+        <h1>{{site.SiteName}}</h1>
+        <p>site url: <a href="{{site.SiteUrl}}">{{site.SiteUrl}}</a></p>
+        <h2>Description:</h2>
+        <p>{{site.Description}}</p>
+        <h2>Tags</h2>
+        {% for tag in site.Tags %}
+            {% if loop.first %}<ul>{% endif %}
+            <li>{{tag}}</li>
+            {% if loop.last %}</ul>{% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</body>
+</html>

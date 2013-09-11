@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Site Page</title>
+</head>
+<body> 
+    <h1>Add Site Page </h1>
+    <form method="post" action="/addSite" enctype="multipart/form-data">
+        <label>Site Name</label>
+        <input type="text" name="sitename" />
+        
+        <label>Site URL</label>
+        <input type="text" name="siteurl" />
+        
+        <label>Site description</label>
+        <textarea name="description"></textarea>
+        
+		<label>Picture</label>
+		<input type="file" name="image" />
+		
+        <label>Tags - comma seperated</label>
+        <input type="text" name="tags" />
+        
+        <input type="submit" value="Add site" />
+    </form>
+</body>
+</html>
