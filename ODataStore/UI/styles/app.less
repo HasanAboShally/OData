@@ -4,6 +4,7 @@
 
 body {
     background-image: url(/styles/images/white_wall_hash.png);
+    overflow-y:scroll;
 }
 
 #site-header {
@@ -48,26 +49,21 @@ body {
 
             img {
                 width: 36px;
-                display: inline-block;
+                display: none;
             }
 
             .name {
-                visibility: hidden;
                 position: absolute;
-                right: -160px;
-                top: 9px;
-                width: 150px;
+                right: 0px;
+                top: 0px;
+                width: 120px;
                 color: #c09853;
                 background-color: #fcf8e3;
                 border:1px solid #fbeed5;
                 padding:5px;
                 .border-radius(4px);
-            }
-
-            &:hover {
-                .name {
-                    visibility: visible;
-                }
+                text-align:center;
+                font-size:75%;
             }
         }
 
@@ -122,4 +118,9 @@ body {
             }
         }
     }
+}
+
+
+#btn-add-odata-link{
+    margin-top:7px;
 }

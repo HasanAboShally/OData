@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
 body {
   background-image: url(/styles/images/white_wall_hash.png);
+  overflow-y: scroll;
 }
 #site-header {
   margin: 0px;
@@ -45,14 +46,13 @@ body {
 }
 #odata-links-list .odata-link .user img {
   width: 36px;
-  display: inline-block;
+  display: none;
 }
 #odata-links-list .odata-link .user .name {
-  visibility: hidden;
   position: absolute;
-  right: -160px;
-  top: 9px;
-  width: 150px;
+  right: 0px;
+  top: 0px;
+  width: 120px;
   color: #c09853;
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
@@ -63,9 +63,8 @@ body {
   -moz-background-clip: padding;
   border-radius: 4px;
   background-clip: padding-box;
-}
-#odata-links-list .odata-link .user:hover .name {
-  visibility: visible;
+  text-align: center;
+  font-size: 75%;
 }
 #odata-links-list .odata-link .link {
   display: block;
@@ -110,5 +109,8 @@ body {
   -moz-background-clip: padding;
   border-radius: 4px;
   background-clip: padding-box;
+}
+#btn-add-odata-link {
+  margin-top: 7px;
 }
 
