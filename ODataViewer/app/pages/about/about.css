@@ -1,0 +1,8 @@
+﻿@import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
+#about-page h1,
+#about-page p {
+  font-family: 'The Girl Next Door', cursive;
+}
+#about-page p {
+  font-size: 120%;
+}

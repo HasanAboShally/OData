@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
+@import url(D:\Projects\OData\ODataViewer\libs\lesshat\lesshat.less);
+
+
+body {
+    background-image: url(/styles/images/white_wall_hash.png);
+}
+
+#site-header {
+    margin: 0px;
+    .border-radius(0px);
+}
+
+.navbar-brand {
+    /*font-family: 'The Girl Next Door', cursive;
+        font-size:175%;
+        font-weight:bold;
+        color:white;*/
+}
+
+
+#odata-links-list {
+    margin: 0px;
+    padding: 20px;
+
+    .odata-link {
+        background: white;
+        border: 1px solid #e5e5e5;
+        border-bottom: 2px solid #e5e5e5;
+        padding: 10px;
+        margin-bottom: 20px;
+        position: relative;
+
+
+        .title {
+            display: block;
+            color: gray;
+            font-size: 150%;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        .user {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            cursor:pointer;
+
+            img {
+                width: 36px;
+                display: inline-block;
+            }
+
+            .name {
+                visibility: hidden;
+                position: absolute;
+                right: -160px;
+                top: 9px;
+                width: 150px;
+                color: #c09853;
+                background-color: #fcf8e3;
+                border:1px solid #fbeed5;
+                padding:5px;
+                .border-radius(4px);
+            }
+
+            &:hover {
+                .name {
+                    visibility: visible;
+                }
+            }
+        }
+
+
+        .link {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: gray;
+        }
+
+        .tags {
+            border-top: 1px dashed #e5e5e5;
+            padding-top: 5px;
+            font-family: monospace;
+
+
+            a {
+                color: gray;
+                font-style: italic;
+            }
+
+            li:after {
+                content: ",";
+                margin-left: 5px;
+                color: fade(gray,50%);
+            }
+        }
+
+
+        .odata-version {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .features {
+            margin-top: 10px;
+            // Hide the non active features.
+            .feature:not(.active) {
+                display: none;
+            }
+
+            .feature.active {
+                font-size: 150%;
+                background: fade(#f9f9f9,50%);
+                padding: 5px;
+                color: gray;
+                border-bottom: 1px solid #e5e5e5;
+                .border-radius(4px);
+            }
+        }
+    }
+}

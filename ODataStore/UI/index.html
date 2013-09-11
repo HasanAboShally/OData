@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>OData Gallery</title>
+
+    <!-- Metas for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+
+    <!-- Lib Styles -->
+    <link href="libs/bootstrap-3/bootstrap.no-icons.min.css" rel="stylesheet" />
+    <link href="/libs/bootstrap-3/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link href="/styles/app.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header id="site-header" class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex8-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+            </button>
+            <a class="navbar-brand" href="#/">OData Gallery
+            </a>
+
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex8-collapse">
+            <ul class="nav navbar-nav" navigation-menu>
+                <li><a href="#">Top Links</a></li>
+                <li><a href="#">Top Users</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <button class="btn btn-success pull-right">Add New Link</button>
+
+        </div>
+
+
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <ul class="container list-unstyled" id="odata-links-list">
+
+
+                    <li class="row odata-link">
+
+                        <div class="col-md-2">
+                            <img class="img-responsive img-thumbnail" src="http://i676.photobucket.com/albums/vv126/c4cmediagroup/Social%20Buttons%20Square/imdb-icon.png" />
+
+
+                            <span class="odata-version label label-success"><small>OData ver.</small><strong>3.0</strong></span>
+
+                            <ul class="features list-unstyled list-inline">
+                                <li class="feature active"><i class="icon-user"></i></li>
+                                <li class="feature active"><i class="icon-lock"></i></li>
+                                <li class="feature active"><i class="icon-star"></i></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-10">
+                            <label class="title">IMDB Movies</label>
+
+
+
+                            <a class="link" href="http://odata.informea.org/services/odata.svc">http://odata.informea.org/services/odata.svc</a>
+
+                            <p class="description">Internet Movie Database (IMDb) is an online database of information related to films, television programs and video games. This includes actors, production crew personnel, and fictional characters featured in these three visual entertainment media.</p>
+
+                            <ul class="tags list-unstyled list-inline">
+                                <li><a href="/tags/movies">movies</a></li>
+                                <li><a href="/tags/cinema">cinema</a></li>
+                                <li><a href="/tags/actor">actor</a></li>
+                                <li><a href="/tags/fun">fun</a></li>
+                            </ul>
+
+                                                        <div class="user">
+                                <img class="img-responsive img-circle" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/6/000/1f6/108/16652ae.jpg" />
+                                <label class="name">Hasan Abo-Shally</label>
+                            </div>
+
+                        </div>
+
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-2"></div>
+
+        </div>
+    </div>
+
+
+    <!-- Lib Scripts -->
+    <script src="/libs/jquery-2.0.3/jquery-2.0.3.min.js"></script>
+    <script src="/libs/bootstrap-3/bootstrap.min.js"></script>
+</body>
+</html>

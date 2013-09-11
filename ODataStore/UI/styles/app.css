@@ -1,0 +1,114 @@
+@import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
+body {
+  background-image: url(/styles/images/white_wall_hash.png);
+}
+#site-header {
+  margin: 0px;
+  -webkit-border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px;
+  -moz-background-clip: padding;
+  border-radius: 0px;
+  background-clip: padding-box;
+}
+.navbar-brand {
+  /*font-family: 'The Girl Next Door', cursive;
+        font-size:175%;
+        font-weight:bold;
+        color:white;*/
+
+}
+#odata-links-list {
+  margin: 0px;
+  padding: 20px;
+}
+#odata-links-list .odata-link {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+#odata-links-list .odata-link .title {
+  display: block;
+  color: gray;
+  font-size: 150%;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+#odata-links-list .odata-link .user {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+}
+#odata-links-list .odata-link .user img {
+  width: 36px;
+  display: inline-block;
+}
+#odata-links-list .odata-link .user .name {
+  visibility: hidden;
+  position: absolute;
+  right: -160px;
+  top: 9px;
+  width: 150px;
+  color: #c09853;
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  padding: 5px;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+#odata-links-list .odata-link .user:hover .name {
+  visibility: visible;
+}
+#odata-links-list .odata-link .link {
+  display: block;
+  margin-bottom: 5px;
+}
+#odata-links-list .odata-link .description {
+  color: gray;
+}
+#odata-links-list .odata-link .tags {
+  border-top: 1px dashed #e5e5e5;
+  padding-top: 5px;
+  font-family: monospace;
+}
+#odata-links-list .odata-link .tags a {
+  color: gray;
+  font-style: italic;
+}
+#odata-links-list .odata-link .tags li:after {
+  content: ",";
+  margin-left: 5px;
+  color: rgba(128, 128, 128, 0.5);
+}
+#odata-links-list .odata-link .odata-version {
+  display: block;
+  margin-top: 10px;
+}
+#odata-links-list .odata-link .features {
+  margin-top: 10px;
+}
+#odata-links-list .odata-link .features .feature:not(.active) {
+  display: none;
+}
+#odata-links-list .odata-link .features .feature.active {
+  font-size: 150%;
+  background: rgba(249, 249, 249, 0.5);
+  padding: 5px;
+  color: gray;
+  border-bottom: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+
