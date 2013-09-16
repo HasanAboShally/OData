@@ -1,21 +1,32 @@
 ﻿
 // Intellisense Module
 
-
-
 angular.module('Intellisense').directive('intellisense', function () {
 
     return {
         restrict: 'E',
         templateUrl: '/core/intellisense/directive/intellisense-template.html',
         scope: {
-            sourceData: '=', // to pass array must be two way binding
-            model: '='
+            model: '=',
+            metadata: '='
         },
-        replace:true,
+        replace: true,
         link: function (scope, iElement, iAttrs, controller) {
-            //$('#intellisense-input').focus(function () { $('#intellisense-suggestions').css('display', 'block'); });
-            //$('#intellisense-input').blur(function () { $('#intellisense-suggestions').css('display', 'none'); });
+
+            var intellisenseProvider;
+
+            scope.$watch(function () { return scope.metadata }, function (newVal, oldVal) {
+
+                if (scope.metadata)
+                    intellisenseProvider = new Intellisense(scope.metadata);
+            });
+
+            $("#intellisense-input").keypress(function () {
+                if (intellisenseProvider) {
+                    var txt = $("#intellisense-input").val();
+                    scope.suggestions = intellisenseProvider.getIntellisense(txt);
+                }
+            });
         }
     }
 });

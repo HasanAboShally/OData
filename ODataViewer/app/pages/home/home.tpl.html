@@ -1,5 +1,4 @@
-﻿<div style="padding: 0px">
-    <div style="position: relative; height: 100%;">
+﻿    <div style="position: relative; height: 100%;">
         <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left">
                 <div class="container">
@@ -16,7 +15,7 @@
                                 </div>
                                 <div class="form-group">
 
-                                    <input type="button" class="btn btn-success form-control" value="Go" />
+                                    <button type="button" class="btn btn-success form-control" ng-click="changeDataUrl()" >Go</button>
                                 </div>
 
                             </form>
@@ -71,7 +70,7 @@
 
                     <div class="form-group col-md-12">
 
-                        <intellisense source-data="metaData" model="intellisenseUrl" />
+                        <intellisense metadata="metadata" model="intellisenseUrl" />
 
                         {{intellisenseUrl}}
 
@@ -138,7 +137,6 @@
             </div>
         </div>
     </div>
-</div>
 
 
 <script script-runner>

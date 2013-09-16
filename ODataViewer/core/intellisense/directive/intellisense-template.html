@@ -3,17 +3,19 @@
 
     <section id="intellisense-suggestions">
 
+        <!-- | orderBy:'@Name'| filter:{type:'query'} |-->
+
         <ul id="query-suggestions" class="list-unstyled">
-            <li data-ng-repeat="item in sourceData | filter:{type:'query'} | orderBy:'name'">
-                <i class="icon-usd"></i>{{item.name}}
+            <li data-ng-repeat="suggestion in suggestions">
+                <i class="icon-usd"></i>{{suggestion['@Name']}}
             </li>
         </ul>
 
-        <ul id="entity-suggestions" class="list-unstyled">
-            <li data-ng-repeat="item in sourceData | filter:{type:'entity'} | orderBy:'name'">
-                <i class="icon-gear"></i>{{item.name}}
+<!--        <ul id="entity-suggestions" class="list-unstyled">
+            <li data-ng-repeat="item in suggestions | filter:{type:'entity'} | orderBy:'name'">
+                <i class="icon-gear"></i>{{item['@Name']}}
             </li>
-        </ul>
+        </ul>-->
 
     </section>
 </div>

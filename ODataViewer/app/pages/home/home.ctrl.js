@@ -1,16 +1,9 @@
 ﻿
-app.controller("HomeCtrl", function ($scope, HistoryManager, MetaDataManager) {
-
-
-
-    $scope.metaData = MetaDataManager.getMetaData();
-
-
-
-
+app.controller("HomeCtrl", function ($scope, $http, HistoryManager, MetaDataManager) {
 
     $scope.historyLinks = HistoryManager.getLinks();
     $scope.currentLink;
+    $scope.metadata;
 
 
     $scope.selectLink = function (link) {
@@ -35,11 +28,29 @@ app.controller("HomeCtrl", function ($scope, HistoryManager, MetaDataManager) {
             snapper.open('right');
     }
 
+    $scope.changeDataUrl = function () {
 
+        var url = $scope.currentLink;
+
+        // Remove the trailing slash (if exists) from the url. 
+        if (url.substr(-1) == '/') {
+            url = url.substr(0, url.length - 1);
+        }
+
+        url += "/$metadata";
+
+        $http.get(url).then(function (result) {
+            var xmlDoc = (new DOMParser()).parseFromString(result.data, "text/xml");
+            MetaDataManager.setFromXML(xmlDoc);
+            $scope.metadata = MetaDataManager.getJSON();
+
+            console.dir($scope.metadata);
+        });
+    }
 
 
     function init() {
-            
+
         if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
         var $ = go.GraphObject.make;  // for conciseness in defining templates
 
