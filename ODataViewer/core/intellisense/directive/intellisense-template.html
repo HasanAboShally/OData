@@ -1,0 +1,19 @@
+﻿<div>
+    <input type="text" id="intellisense-input" ng-model="model" class="form-control" placeholder="query.." />
+
+    <section id="intellisense-suggestions">
+
+        <ul id="query-suggestions" class="list-unstyled">
+            <li data-ng-repeat="item in sourceData | filter:{type:'query'} | orderBy:'name'">
+                <i class="icon-usd"></i>{{item.name}}
+            </li>
+        </ul>
+
+        <ul id="entity-suggestions" class="list-unstyled">
+            <li data-ng-repeat="item in sourceData | filter:{type:'entity'} | orderBy:'name'">
+                <i class="icon-gear"></i>{{item.name}}
+            </li>
+        </ul>
+
+    </section>
+</div>

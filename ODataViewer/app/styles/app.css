@@ -1,6 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=The+Girl+Next+Door);
 #content {
   overflow-y: scroll;
+  padding: 20px;
+}
+body {
+  background-image: url(/app/styles/images/grey_wash_wall.png);
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  outline: none !important;
 }
 #site-header {
   margin: 0px;
@@ -23,9 +33,6 @@
         font-weight:bold;
         color:white;*/
 
-}
-.animation-container {
-  position: relative;
 }
 .page-animation.ng-enter,
 .page-animation.ng-leave {
@@ -66,9 +73,18 @@
   color: 0px 5px 25px black;
 }
 .snap-drawers {
-  background-image: url(/app/styles/images/tweed_@2x.png);
-  background-image: url(/app/styles/images/classy_fabric.png);
   background-image: url(/app/styles/images/grey_wash_wall.png);
   color: white;
 }
+.btn i {
+  margin-right: 5px;
+}
+/*.twitter-typeahead .tt-hint {
+    display: block;
+    height: 38px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border: 1px solid transparent;
+}*/
 

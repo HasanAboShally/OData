@@ -1,3 +1,3 @@
 ﻿
 
-var app = angular.module("ODataViewerApp", [/*'ODataExplorerCore',*/ 'ngRoute', 'ngResource', 'ngAnimate']);
+var app = angular.module("ODataViewerApp", [/*'ODataExplorerCore',*/ 'Intellisense', 'ngRoute', 'ngResource', 'ngAnimate']);

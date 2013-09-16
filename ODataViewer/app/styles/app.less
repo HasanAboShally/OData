@@ -3,12 +3,16 @@
 
 #content {
     overflow-y: scroll;
-    
+    padding: 20px;
 }
 
 body {
-    //background: url('/app-data/images/pattern.png') #ffffff;
-    
+    background-image: url(/app/styles/images/grey_wash_wall.png);
+}
+
+* {
+    .user-select(~"none");
+    outline: none !important;
 }
 
 #site-header {
@@ -36,7 +40,6 @@ body {
 }
 
 .animation-container {
-    position: relative;
 }
 
 .page-animation.ng-enter,
@@ -75,6 +78,7 @@ body {
 
 
 
+
 /* Default demo styles */
 .snap-content {
     background: white;
@@ -83,12 +87,27 @@ body {
 }
 
 .snap-drawers {
-background-image: url(/app/styles/images/tweed_@2x.png);
-background-image: url(/app/styles/images/classy_fabric.png);
-background-image: url(/app/styles/images/grey_wash_wall.png);
+    background-image: url(/app/styles/images/grey_wash_wall.png);
     color: white;
 }
 
 .snap-drawer {
     // background: #2B3141;
 }
+
+
+.btn {
+    i {
+        margin-right: 5px;
+    }
+}
+
+
+/*.twitter-typeahead .tt-hint {
+    display: block;
+    height: 38px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border: 1px solid transparent;
+}*/

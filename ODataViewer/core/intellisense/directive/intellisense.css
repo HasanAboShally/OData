@@ -1,0 +1,29 @@
+﻿
+
+#intellisense-suggestions {
+    background: white;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+    #intellisense-suggestions li {
+        padding:5px;
+    }
+
+        #intellisense-suggestions li:hover {
+            background:#f9f9f9;
+        }
+
+        #intellisense-suggestions li i {
+            margin-right: 5px;
+        }
+
+
+#query-suggestions li i {
+    color: #AF4FA2;
+}
+
+#entity-suggestions li i {
+    color: #E9B64D;
+}

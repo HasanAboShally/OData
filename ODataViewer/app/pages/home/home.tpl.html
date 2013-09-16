@@ -1,71 +1,153 @@
-﻿<link href="/app/pages/home/home.min.css" rel="stylesheet" />
+﻿<div style="padding: 0px">
+    <div style="position: relative; height: 100%;">
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <header>
+                                <h2>Settings</h2>
+                            </header>
+                            <hr />
 
+                            <form role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="url" ng-model="currentLink" />
+                                </div>
+                                <div class="form-group">
 
+                                    <input type="button" class="btn btn-success form-control" value="Go" />
+                                </div>
 
-<div class="text-muted">
-    <label><small>Current URL:</small></label>
-    <span>http://odata.informea.org/services/odata.svc</span>
-</div>
+                            </form>
 
+                            <hr />
 
-
-<form role="form" class="row">
-
-
-    <div class="form-group col-md-10">
-        <input type="text" class="form-control" placeholder="query.." />
-    </div>
-
-    <div class="form-group col-md-2">
-        <input type="button" class="form-control btn-primary" value="Submit" />
-    </div>
-
-</form>
-
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="well">
-
-            <div class="btn-group pull-right" data-toggle="buttons">
-                <label class="btn btn-default active">
-                    <input type="radio" name="options" id="option1">
-                    Plain JSON
-                </label>
-                <label class="btn btn-default">
-                    <input type="radio" name="options" id="option2">
-                    Table
-                </label>
-                <label class="btn btn-default">
-                    <input type="radio" name="options" id="option3">
-                    Graph
-                </label>
+                            <ul id="history-links" class="list-unstyled">
+                                <li ng-repeat="link in historyLinks" ng-click="selectLink(link);" ng-class="{'active':isSelectedLink(link)}">{{link}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="snap-drawer snap-drawer-right">
 
-            <div class="clearfix"></div>
-            <hr />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <header>
+                                <h2>Meta-Data</h2>
+                            </header>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <p>
-                {
-	"title": "Example Schema",
-	"type": "object",
-	"properties": {
-		"firstName": {
-			"type": "string"
-		},
-		"lastName": {
-			"type": "string"
-		},
-		"age": {
-			"description": "Age in years",
-			"type": "integer",
-			"minimum": 0
-		}
-	},
-	"required": ["firstName", "lastName"]
-}
-            </p>
+        <div id="content" class="snap-content">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-2">
+                        <button class="btn btn-default btn-block" ng-click="showSettings()"><i class="icon-gear"></i>Settings</button>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="text-muted">
+                            <label><small>Current URL:</small></label>
+                            <span>{{currentLink}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-default btn-block" ng-click="showMetaData()"><i class="icon-list-ul"></i>Meta-Data</button>
+                    </div>
+                </div>
+
+                <hr />
+
+                <form role="form" class="row">
+
+                    <div class="form-group col-md-12">
+
+                        <intellisense source-data="metaData" model="intellisenseUrl" />
+
+                        {{intellisenseUrl}}
+
+                    </div>
+                    <div class="visible-sm visible-xs form-group col-md-12">
+                        <button type="button" class="form-control btn-primary btn-lg">Go</button>
+                    </div>
+
+
+                </form>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="well">
+
+                            <div class="btn-group pull-right" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                    <input type="radio" name="options" id="option1">
+                                    Plain JSON
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="options" id="option2">
+                                    Table
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="options" id="option3">
+                                    Graph
+                                </label>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <hr />
+
+                            <p>
+                                {
+	                                    "title": "Example Schema",
+	                                    "type": "object",
+	                                    "properties": {
+		                                    "firstName": {
+			                                    "type": "string"
+		                                    },
+		                                    "lastName": {
+			                                    "type": "string"
+		                                    },
+		                                    "age": {
+			                                    "description": "Age in years",
+			                                    "type": "integer",
+			                                    "minimum": 0
+		                                    }
+	                                    },
+	                                    "required": ["firstName", "lastName"]
+                                   }
+                            </p>
+
+
+                            <div id="sample">
+                                <div id="myDiagram" style="background-color: white; border: solid 1px black; width: 100%; height: 700px"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+<script script-runner>
+    snapper = new Snap({
+        element: document.getElementById('content')
+    });
+
+    snapper.disable(); // disable the drag
+
+</script>
+
 
