@@ -44,7 +44,8 @@ app.controller("HomeCtrl", function ($scope, $http, HistoryManager, MetaDataMana
             MetaDataManager.setFromXML(xmlDoc);
             $scope.metadata = MetaDataManager.getJSON();
 
-            console.dir($scope.metadata);
+            snapper.close();
+
         });
     }
 

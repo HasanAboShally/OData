@@ -1,4 +1,5 @@
-﻿<div>
+﻿<div style="position:relative">
+
     <input type="text" id="intellisense-input" ng-model="model" class="form-control" placeholder="query.." />
 
     <section id="intellisense-suggestions">
@@ -6,8 +7,11 @@
         <!-- | orderBy:'@Name'| filter:{type:'query'} |-->
 
         <ul id="query-suggestions" class="list-unstyled">
-            <li data-ng-repeat="suggestion in suggestions">
-                <i class="icon-usd"></i>{{suggestion['@Name']}}
+
+             <li class="no-suggestions" ng-show="(suggestions.length == 0)">- no suggestions -</li>
+
+            <li data-ng-repeat="suggestion in suggestions" ng-class="{'selected':($index == selectedSuggestionsIndex)}">
+                <i ng-class="{'icon-gear': (suggestion['@EntityType']), 'icon-usd': (!suggestion['@EntityType'])}"></i>{{ suggestion['@Name']}}
             </li>
         </ul>
 
