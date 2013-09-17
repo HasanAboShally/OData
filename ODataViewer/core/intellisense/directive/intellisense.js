@@ -87,7 +87,7 @@ angular.module('Intellisense').directive('intellisense', function () {
                     });
                 }
 
-                if (e.ctrlKey && e.keyCode == SPACE) {
+                if (e.ctrlKey && e.keyCode == keys.SPACE) {
                     showSuggestions('');
                 }
                 else {

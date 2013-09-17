@@ -1,5 +1,5 @@
 ﻿
-app.controller("HomeCtrl", function ($scope, $http, HistoryManager, MetaDataManager) {
+app.controller("HomeCtrl", function ($scope, $http, HistoryManager, MetaDataManager, DataManager) {
 
     $scope.historyLinks = HistoryManager.getLinks();
     $scope.currentLink;
@@ -216,7 +216,7 @@ app.controller("HomeCtrl", function ($scope, $http, HistoryManager, MetaDataMana
 
 
 
-
+    $("#jsonviewer").JSONView(DataManager.getData());
 
 
 

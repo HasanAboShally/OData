@@ -146,11 +146,11 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   left: -5px;
   top: 4px;
-  -webkit-transform: rotate(-2.5deg);
-  -moz-transform: rotate(-2.5deg);
-  -o-transform: rotate(-2.5deg);
-  -ms-transform: rotate(-2.5deg);
-  transform: rotate(-2.5deg);
+  -webkit-transform: rotate(-1.2deg);
+  -moz-transform: rotate(-1.2deg);
+  -o-transform: rotate(-1.2deg);
+  -ms-transform: rotate(-1.2deg);
+  transform: rotate(-1.2deg);
 }
 #data-container:after {
   background: #f6f6f6;
@@ -164,47 +164,42 @@
   transform: rotate(1.4deg);
 }
 #site-logo {
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: block;
   margin: 0px auto;
   position: relative;
   padding: 10px;
-  -webkit-border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
-  -moz-background-clip: padding;
-  border-radius: 5px;
-  background-clip: padding-box;
+  width: 250px;
+  margin-bottom: 10px;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
 }
-#site-logo:before,
-#site-logo:after {
-  content: "";
-  height: 98%;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-#site-logo:before {
-  background: #fafafa;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  left: -5px;
-  top: 4px;
-  -webkit-transform: rotate(-2.5deg);
-  -moz-transform: rotate(-2.5deg);
-  -o-transform: rotate(-2.5deg);
-  -ms-transform: rotate(-2.5deg);
-  transform: rotate(-2.5deg);
-}
-#site-logo:after {
-  background: #f6f6f6;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  right: -3px;
-  top: 1px;
-  -webkit-transform: rotate(1.4deg);
-  -moz-transform: rotate(1.4deg);
-  -o-transform: rotate(1.4deg);
-  -ms-transform: rotate(1.4deg);
-  transform: rotate(1.4deg);
+/*#site-logo:before, #site-logo:after {
+        content: "";
+        height: 98%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    #site-logo:before {
+        background: #fafafa;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        left: -5px;
+        top: 4px;
+        .transform(~"rotate(-2.5deg)");
+    }
+
+    #site-logo:after {
+        background: #f6f6f6;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        right: -3px;
+        top: 1px;
+        .transform(~"rotate(2.4deg)");
+    }*/
+#site-footer {
+  margin-top: 20px;
+  color: #928D85;
+  text-align: center;
 }
 
