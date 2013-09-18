@@ -35,6 +35,7 @@ app.service("HistoryManager", function () {
 
     	return {
         	getLinks: getLinks,
-		addLink: addLink
+		addLink: addLink,
+		removeLink: removeLink
     	}
 });
