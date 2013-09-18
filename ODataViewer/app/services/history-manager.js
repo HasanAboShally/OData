@@ -8,6 +8,10 @@ app.service("HistoryManager", function () {
         "http://linkedin.com/odata.svc",
     ];
 
+    function addLink(url) {
+
+    }
+
     function getLinks() {
         return demoLinks;
     }

@@ -3,7 +3,8 @@
   overflow-y: scroll;
   padding: 20px;
 }
-* {
+*,
+*.focus {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -201,5 +202,21 @@
   margin-top: 20px;
   color: #928D85;
   text-align: center;
+}
+.form-control {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);;
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);;
+  color: 0 1px 5px rgba(0, 0, 0, 0.1);;
+  border: none;
+}
+.form-control:focus {
+  border-color: #cccccc;
+  outline: 0;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);;
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);;
+  color: 0 1px 5px rgba(0, 0, 0, 0.2);;
+  border: none;
 }
 

@@ -41,7 +41,7 @@
                         </header>
                         <hr />
 
-                        
+
                         <div id="sample">
                             <div id="myDiagram" style="background-color: white; border: solid 1px black; width: 100%; height: 700px"></div>
                         </div>
@@ -63,9 +63,9 @@
 
                 <div class="col-md-8">
 
-                    <div id="site-logo"> 
-                    <img class="img-responsive" src="/resources/logo.png" />
-                        </div>
+                    <div id="site-logo">
+                        <img class="img-responsive" src="/resources/logo.png" />
+                    </div>
 
                 </div>
                 <div class="col-md-2">
@@ -78,19 +78,33 @@
                 <div class="col-md-12">
                     <div id="data-container">
 
-                        <div class="text-muted">
+                        <!--   <div class="text-muted">
                             <label><small>Current URL:</small></label>
                             <span>{{currentLink}}</span>
-                        </div>
+                        </div>-->
 
                         <form role="form" class="row">
 
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-10">
 
                                 <intellisense metadata="metadata" model="intellisenseUrl" />
 
 
                             </div>
+
+                            <div class="col-md-2">
+                                <div class="btn-group pull-right" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="options" id="option1">
+                                        Plain JSON
+                                    </label>
+                                    <label class="btn btn-default">
+                                        <input type="radio" name="options" id="option2">
+                                        Table
+                                    </label>
+                                </div>
+                            </div>
+
                             <div class="visible-sm visible-xs form-group col-md-12">
                                 <button type="button" class="form-control btn-primary btn-lg">Go</button>
                             </div>
@@ -98,22 +112,8 @@
 
                         </form>
 
-                        <div class="btn-group pull-right" data-toggle="buttons">
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option1">
-                                Plain JSON
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options" id="option2">
-                                Table
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options" id="option3">
-                                Graph
-                            </label>
-                        </div>
 
-                        <div class="clearfix"></div>
+
                         <hr />
 
                         <div id="jsonviewer">
@@ -127,18 +127,16 @@
             </div>
         </div>
         <hr />
-            <footer id="site-footer">
-                Project maintained by ODataV-Team, Visit us on <a href="http://hasanaboshally.github.io/OData/">Github</a> ● <a href="http://facebook.com/OData/">Facebook</a>
-                <br />
-                And also have a look at our <a href="http://odataGallery.com"> OData Providers Gallery </a>
-
-            </footer>
+        <footer id="site-footer">
+            Project maintained by ODataViewer Team ● Visit us on <a href="http://hasanaboshally.github.io/OData/">Github</a> ● Follow us on <a href="http://twitter.com/OData/">Twitter</a> ●
+            <br />
+            Visit our <a href="http://odataGallery.com">OData Providers Gallery </a>
+            <br />
+            2013 © All rights reserved
+        </footer>
 
 
     </div>
-
-
-
 </div>
 
 
