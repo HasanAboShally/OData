@@ -15,13 +15,20 @@ app.service("HistoryManager", function () {
 		arr.unshift(item);
 		return arr;
 	}
-
+	
     	function addLink(url) {
 		var links = getLinks();
 		links = pushUnique(links,url);
 		localStorage["ODataLinks"] = JSON.stringify(links);
     	}
-
+	
+	function removeLink(url){
+		var links = getLinks();
+		var i = links.indexOf(url);
+		links.remove(i==-1 ? 0:i);
+		localStorage["ODataLinks"] = JSON.stringify(links);
+	}
+	
     	function getLinks() {
         	return JSON.parse(localStorage["ODataLinks"] || '[]');
     	}
