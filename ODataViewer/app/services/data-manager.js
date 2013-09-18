@@ -42,7 +42,7 @@
 
     function getData(url) {
 
-        var demoJson = {
+        /*var demoJson = {
             "odata.metadata": "http://services.odata.org/V3/OData/OData.svc/$metadata#Products",
             "value": [
                     {
@@ -147,7 +147,9 @@
                         "Price": "6.99"
                     }
             ]
-        }
+        }*/
+        
+        
 
         return demoJson;
     }
