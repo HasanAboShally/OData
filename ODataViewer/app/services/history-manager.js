@@ -1,22 +1,26 @@
 ﻿
 app.service("HistoryManager", function () {
 
-    var demoLinks = [
-        "http://google.com/odata.svc",
-        "http://yahoo.com/odata.svc",
-        "http://ynet.co.il/odata.svc",
-        "http://linkedin.com/odata.svc",
-    ];
+	Array.prototype.pushUnique = function (item) {
+	if (this.indexOf(item) == -1) {
+		this.push(item);
+		return true;
+	}
+	return false;
+	}
 
     function addLink(url) {
-
+		var links = getLinks();
+		links.pushUnique(url);
+		localStorage["ODataLinks"] = JSON.stringify(links);
     }
 
     function getLinks() {
-        return demoLinks;
+        return JSON.parse(localStorage["ODataLinks"] || '[]');
     }
 
     return {
-        getLinks: getLinks
+        getLinks: getLinks,
+		addLink: addLink
     }
 });
