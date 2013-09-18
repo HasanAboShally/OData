@@ -13,11 +13,12 @@ app.service("HistoryManager", function () {
 			arr.remove(i);
 		}
 		arr.push(item);
+		return arr;
 	}
 
     	function addLink(url) {
 		var links = getLinks();
-		pushUnique(links,url);
+		links = pushUnique(links,url);
 		localStorage["ODataLinks"] = JSON.stringify(links);
     	}
 
