@@ -8,7 +8,7 @@ app.service("HistoryManager", function () {
 	};
 	
 	function pushUnique(item) {
-		int i = this.indexOf(item);
+		var i = this.indexOf(item);
 		if (i != -1) {
 			this.remove(i);
 		}
