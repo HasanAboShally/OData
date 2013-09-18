@@ -1,6 +1,5 @@
 ﻿
 app.service("HistoryManager", function () {
-
 	Array.prototype.pushUnique = function (item) {
 	if (this.indexOf(item) == -1) {
 		this.push(item);
@@ -9,18 +8,18 @@ app.service("HistoryManager", function () {
 	return false;
 	}
 
-    function addLink(url) {
+    	function addLink(url) {
 		var links = getLinks();
 		links.pushUnique(url);
 		localStorage["ODataLinks"] = JSON.stringify(links);
-    }
+    	}
 
-    function getLinks() {
-        return JSON.parse(localStorage["ODataLinks"] || '[]');
-    }
+    	function getLinks() {
+        	return JSON.parse(localStorage["ODataLinks"] || '[]');
+    	}
 
-    return {
-        getLinks: getLinks,
+    	return {
+        	getLinks: getLinks,
 		addLink: addLink
-    }
+    	}
 });
