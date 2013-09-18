@@ -12,7 +12,7 @@ app.service("HistoryManager", function () {
 		if (i != -1) {
 			arr.remove(i);
 		}
-		arr.push(item);
+		arr.unshift(item);
 		return arr;
 	}
 
