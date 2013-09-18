@@ -1,11 +1,18 @@
 ﻿
 app.service("HistoryManager", function () {
-	Array.prototype.pushUnique = function (item) {
-	if (this.indexOf(item) == -1) {
+	// Array Remove - By John Resig (MIT Licensed)
+	Array.prototype.remove = function(from, to) {
+		var rest = this.slice((to || from) + 1 || this.length);
+  		this.length = from < 0 ? this.length + from : from;
+  		return this.push.apply(this, rest);
+	};
+	
+	function pushUnique(item) {
+		int i = this.indexOf(item);
+		if (i != -1) {
+			this.remove(i);
+		}
 		this.push(item);
-		return true;
-	}
-	return false;
 	}
 
     	function addLink(url) {
