@@ -7,17 +7,17 @@ app.service("HistoryManager", function () {
   		return this.push.apply(this, rest);
 	};
 	
-	function pushUnique(item) {
-		var i = this.indexOf(item);
+	function pushUnique(arr, item) {
+		var i = arr.indexOf(item);
 		if (i != -1) {
-			this.remove(i);
+			arr.remove(i);
 		}
-		this.push(item);
+		arr.push(item);
 	}
 
     	function addLink(url) {
 		var links = getLinks();
-		links.pushUnique(url);
+		pushUnique(links,url);
 		localStorage["ODataLinks"] = JSON.stringify(links);
     	}
 
