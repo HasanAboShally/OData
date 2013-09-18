@@ -2,6 +2,8 @@
 app.service("HistoryManager", function () {
 	// Array Remove - By John Resig (MIT Licensed)
 	Array.prototype.remove = function(from, to) {
+		if(from == -1)
+			return;
 		var rest = this.slice((to || from) + 1 || this.length);
   		this.length = from < 0 ? this.length + from : from;
   		return this.push.apply(this, rest);
@@ -25,7 +27,7 @@ app.service("HistoryManager", function () {
 	function removeLink(url){
 		var links = getLinks();
 		var i = links.indexOf(url);
-		links.remove(i==-1 ? 0:i);
+		links.remove(i);
 		localStorage["ODataLinks"] = JSON.stringify(links);
 	}
 	
